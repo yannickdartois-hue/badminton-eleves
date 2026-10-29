@@ -130,7 +130,8 @@ function tempsMort(){
     <div class="tm-cols">${['a','b'].map((s,j)=>`<div class="carte"><h3>${esc(noms[s])}</h3>
       ${m.codes?`<p class="small">0=${m.codes[s][0]} · 1=${m.codes[s][1]} · 2=${m.codes[s][2]} · 3=${m.codes[s][3]} · x=${m.codes[s][4]}</p>`:''}
       <ul>${conseils(m.codes&&m.codes[s],pj[j]).map(t=>`<li>${esc(t)}</li>`).join('')}</ul></div>`).join('')}</div>
-    <p class="small muted">Coach : pose 1 question, donne 1 seul conseil simple. « Où perd-il ses points ? Qu’est-ce qui marche pour toi ? »</p></div>`;
+    <p class="small muted">Coach : pose 1 question, donne 1 seul conseil simple. « Où perd-il ses points ? Qu’est-ce qui marche pour toi ? »</p>
+    <div class="rangee"><button type="button" class="bt mini" data-act="tmanalyse">📝 Noter l’analyse de la mi-temps</button></div></div>`;
   clearInterval(TM);const fin=Date.now()+60000;
   TM=setInterval(()=>{const r=Math.max(0,Math.ceil((fin-Date.now())/1000)),e=document.getElementById('tm-t');if(e)e.textContent=Math.floor(r/60)+':'+String(r%60).padStart(2,'0');
     if(!r){clearInterval(TM);sonner();}},250);
@@ -256,6 +257,7 @@ window.EPLUS={
       case 'mqcoach':{const P=S.poules[pk()],m=P.matchs[MQ.i];m.coach=!m.coach;MQ.code=null;sauver();peindreMarque();return true}
       case 'mqcode':noterCode(v);return true;
       case 'tempsmort':tempsMort();return true;
+      case 'tmanalyse':{const i=MQ&&MQ.i;fermerTM();MQ=null;peindreMarque();if(i!=null)fenAnalyse(i);return true}
       case 'tmfermer':{fermerTM();const P=S.poules[pk()],m=MQ&&P&&P.matchs[MQ.i],L=m&&m.live;if(L&&L.pause!=null&&L.mt){L.fin=Date.now()+L.pause;L.pause=null;sauver();peindreMarque()}return true}
       case 'reprendreCodes':{const E=elv(),r=rec(E.id,S.seance),t=codesEleve(E.nom,S.seance);if(!t)return true;
         r.grille=Object.assign(r.grille||{projet:''},{c0:t[0],c1:t[1],c2:t[2],c3:t[3],cx:t[4]});touche(r);sauver();rendre();toast('Grille du coach remplie.');return true}

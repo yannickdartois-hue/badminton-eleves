@@ -23,3 +23,10 @@ Appli élève hors ligne du lycée Georges Pompidou, sur le modèle de l'appli d
 - Après une modification : augmenter `CACHE` dans `sw.js`.
 
 QR : `BDE1:` + JSON compact compressé (deflate-raw, base64url). Codes secrets des groupes, copie de secours chiffrée, transfert d'élève, démo : comme l'appli de tennis de table.
+
+## Mise à jour du 29/10/2026
+- **Évaluation finale (fiche GAREEPS)** : bouton « 📝 Analyse » sur chaque match (style de jeu et +/– de l'adversaire, ma stratégie, mi-temps et après). Depuis le temps mort : « Noter l'analyse de la mi-temps ». Séances 8 et 9 : « Ma gestion des 15 minutes » (duo, duel). Tout part avec la poule (fichier et QR) et s'affiche dans l'outil prof.
+- **Plus de mode « rencontre de binômes »** dans l'appli (la note suit la grille GAREEPS) ; les anciennes rencontres restent lisibles.
+- **Charte v1** : `eps-charte-v1.css` et `eps-aide.js` recopiés tels quels depuis `mon-eps/atelier/ecran-de-cours/commun` (source unique). Couleur du badminton du portail (#0e7490). Thème sombre seulement en option (`data-theme="dark"`).
+- **Mode d'emploi** : bouton « ? » en haut (texte dans `aide.js`) ; option « Lecture facilitée ».
+- **Fichiers partagés avec badminton-prof** : `logique.js`, `scan.js`, `donnees.js`, `qrcode.js`, `jsqr.js`, `eps-aide.js`, `eps-charte-v1.css` — copies identiques, vérifiées par `badminton-prof/tests/circuit.js`.
