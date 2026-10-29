@@ -14,7 +14,7 @@ Appli élève hors ligne du lycée Georges Pompidou, sur le modèle de l'appli d
 
 ## Illustrations et vidéos
 - **Images** : découpées dans le document « BAD cycle complet, dernière version » (fiches GAREEPS) : les 44 exercices des thèmes 1 à 12 et 10 matchs à thème, dans `img/` (`exN.jpg`, `mtN.jpg`), listés dans `images.js` et dans `sw.js` (`IMAGES`). Les matchs à thème 4, 6 et 13 (et les exercices du double D1 à D3) n'ont pas d'image dans le document : l'appli montre le schéma de terrain du cycle.
-- **Vidéos** : `videos.js`, chaîne PeerTube `badminton_montpellier` (apps.education.fr), relevée le 29/10/2026 : exercices 5 à 26 et matchs à thème 2 à 6. À confirmer avant de les brancher : « Bad Exo 27-1 », les 3 « Bad Exo 28-2 » et « Match à thème 7-1 ». Une nouvelle vidéo = une ligne à ajouter. Toucher l'image ouvre la vidéo (internet nécessaire).
+- **Vidéos** : `videos.js`, chaîne PeerTube `badminton_montpellier` (apps.education.fr), relevée le 29/10/2026 : exercices 1 à 26 et matchs à thème 1 à 6. Exercices 1 à 4 et match à thème 1 : vidéos titrées dans l'ancienne numérotation (« Exo 27-1 », 3 × « Exo 28-2 », « Match à thème 7-1 »), correspondance supposée à vérifier. Une nouvelle vidéo = une ligne à ajouter. Toucher l'image ouvre la vidéo (internet nécessaire).
 
 ## Fichiers
 - `donnees.js` : données GAREEPS reprises de `cycle-badminton` (cycle-badminton-old.html), sans modification. Le thème 13 (double) vient de l'outil du cycle : le carnet d'origine en a 12.
