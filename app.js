@@ -253,13 +253,14 @@ function schema(k){
 function illustration(src,vid,alt,principe,sch){
   const pr=principe?`<p class="principe"><b>Le principe</b> ${esc(principe)}</p>`:'';
   const bv=vid?`<button type="button" class="bt mini" data-act="video" data-u="${vid.u}" data-t="${esc(vid.t)}">▶ Voir la vidéo · ${duree(vid.d)}</button>`:'';
+  const av=vid&&vid.v?`<p class="avert small vverif">⚠ Vidéo à vérifier : son titre sur la chaîne vient de l’ancienne numérotation, elle montre peut-être un autre exercice.</p>`:'';
   if(src){
     const img=`<img src="${src}" alt="${esc(alt)}" loading="lazy">`;
     return (vid?`<button type="button" class="illus" data-act="video" data-u="${vid.u}" data-t="${esc(vid.t)}">${img}<span class="play" aria-hidden="true">▶</span><span class="lv">Voir la vidéo · ${duree(vid.d)}</span></button>`
-              :`<div class="illus sans">${img}<span class="lv">Vidéo à venir</span></div>`)+pr;
+              :`<div class="illus sans">${img}<span class="lv">Vidéo à venir</span></div>`)+av+pr;
   }
   const sc=schema(sch);
-  if(sc)return sc+(bv?`<div class="rangee">${bv}</div>`:'')+pr;
+  if(sc)return sc+(bv?`<div class="rangee">${bv}</div>`:'')+av+pr;
   return `<div class="illus attente"><span>🖼️ Illustration du document GAREEPS à venir</span>${bv}</div>`+pr;
 }
 function voirAussi(n){
