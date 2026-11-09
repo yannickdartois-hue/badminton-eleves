@@ -2,7 +2,7 @@
    La page est rechargée depuis GitHub si le réseau répond en moins de 3 s, sinon depuis la tablette ;
    les autres fichiers sont servis depuis la tablette et mis à jour en arrière-plan.
    Après une modification des fichiers : augmenter le numéro de CACHE (badminton-eleves-vN). Nouvelle image : l'ajouter à IMAGES. */
-const CACHE='badminton-eleves-v16';
+const CACHE='badminton-eleves-v17';
 // Toutes les applis partagent le même stockage (même adresse github.io) : on n'efface QUE les anciennes versions de CETTE appli.
 const MES_CACHES=/^(?:badminton\-eleves-v|bde-v)\d+$/;
 const FICHIERS=['./','eps-rappel.js','eps-code.js','eps-maj.js','eps-avatars.js','img/avatars/stop.webp','img/avatars/bravo.webp','img/avatars/envoyer.webp','img/avatars/blesse.webp','index.html','aide.js','eps-aide.js','eps-charte-v1.css','app.js','eleve-plus.js','demo.js','logique.js','donnees.js','schemas.js','images.js','videos.js','qrcode.js','jsqr.js','scan.js','manifest.webmanifest',
