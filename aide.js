@@ -26,6 +26,7 @@ window.EPS_AIDE={appli:'Badminton · Élève',bouton:false,publics:[
 {t:'Évaluation finale (séances 8 et 9)',html:`<ul><li>Pour chaque match : bouton <span class="bouton">📝 Analyse</span>. Écris le style de jeu de ton adversaire et ses points forts et faibles, ta stratégie, puis ce que tu changes à la mi-temps et ce que tu retiens après le match.</li>
 <li>Onglet Séance : <b>Ma gestion des 15 minutes</b> (échauffement en duo, puis en duel).</li>
 <li>Le professeur lit ces analyses pour noter ton projet de jeu (AFL1) et ton analyse (AFL2).</li></ul>`},
+{t:'Code oublié, changer de tablette',html:`<ul><li><b>Code oublié</b> : touche « Code oublié ? » sous le carnet. Le carnet ne peut pas être rouvert : supprime-le, crée un nouveau groupe, et demande au professeur le <b>QR de reprise</b> de chaque élève (il rend l’étoile, les axes, les poules) : Mon groupe → « Scanner le QR de l’élève qui arrive ».</li><li><b>Pour ne pas l’oublier</b> : notez le code au dos du carnet ou dans l’agenda.</li></ul>`},
 {t:'Envoyer en fin de séance',html:`<ul><li><b>Envoyer</b> → <span class="bouton">Montrer le QR code</span> au professeur (un QR par élève, puis un pour la poule), ou envoi en ligne si le professeur l’a activé.</li>
 <li>Un bandeau rouge rappelle une séance non envoyée.</li>
 <li>Un élève change de groupe : <b>Mon groupe</b> → « … part », puis sur l’autre tablette « Scanner le QR de l’élève qui arrive ».</li></ul>`}]}
