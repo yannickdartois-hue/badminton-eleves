@@ -265,6 +265,12 @@ i.p1::after{content:"1";color:#fff}i.p2::after{content:"2";color:#000}i.p3::afte
 .sets .set small{font-size:12px;color:var(--repere)}
 #table-ecran .schema{max-width:900px;margin:0 auto 12px}
 .vverif{background:#FFF3C4!important;color:#5C4300!important;border-left:5px solid #C99A00!important;margin:8px 0 0}
+
+/* « Passer aux saisies de … » (règle commune des applis en binôme, modèle demi-fond élève) : une couleur par élève */
+.eltour{border-radius:14px;padding:8px 10px;color:#fff;margin:8px 0 12px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.eltour.bas{margin:16px 0 8px}.eltour.ta{background:#1d4ed8}.eltour.tb{background:#c2410c}.eltour.tc{background:#15803d}.eltour.td{background:#6d28d9}
+.eltour>span{font-size:16px}.eltour b{font-size:17px}
+.eltour button{background:#fff;color:#14181f;border:0;border-radius:12px;min-height:48px;padding:0 14px;font:inherit;font-weight:800;font-size:16px;cursor:pointer;flex:1 1 auto;max-width:100%}
 </style>
 <link rel="stylesheet" href="eps-charte-v1.css">
 <style>/* Charte v1 — Badminton : couleur de l'activité (calculée comme construire.py, depuis activites.json) */
